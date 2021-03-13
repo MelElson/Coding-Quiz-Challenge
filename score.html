@@ -1,20 +1,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <title>Code Quiz</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <title>Code Quiz</title>
 </head>
 
 <body>
-    <h1>Highscores</h1>
-    <ul id="highScore"></ul>
-      <a href="index.html"><button class="go-back">Go Back</button></a>
-      <button id="clear" value="reset">Clear Highscore</button>
+  <h1>Highscores</h1>
+  <ul id="highScore"></ul>
+  <a href="index.html"><button class="go-back">Go Back</button></a>
+  <button id="clear" value="reset">Clear Highscore</button>
 
-    <script src="assets/js/score.js"></script>
+  <script>
+    var highScore = document.querySelector("#highScore");
+    var clear = document.querySelector("#clear");
+    var goBack = document.querySelector("#goBack");
+
+    // Event listeners
+    clear.addEventListener("click", function () {
+      localStorage.clear();
+      location.reload();
+    });
+    // local stroage 
+    var allScores = localStorage.getItem("allScores");
+    allScores = JSON.parse(allScores);
+
+    if (allScores !== null) {
+
+      for (var i = 0; i < allScores.length; i++) {
+
+        var createLi = document.createElement("li");
+        createLi.textContent = allScores[i].initials + " " + allScores[i].score;
+        highScore.appendChild(createLi);
+
+      }
+    }
+  </script>
+ <!-- <script src="assets/js/score.js"></script> -->
+ <script src="assets/js/script2.js"></script>
 
 
 

@@ -3,7 +3,6 @@ var questionIndex = 0;
 var Time = document.querySelector("#Time");
 var timer = document.querySelector("#startTime");
 var questionDiv = document.querySelector("#questionDiv");
-// time
 var secondsLeft = 76;
 var holdInterval = 0;
 var penalty = 10;
@@ -56,12 +55,13 @@ function render(questionIndex) {
     // Clears existing data 
     questionDiv.innerHTML = "";
     ulCreateList.innerHTML = "";
-
+  // loop through questions
     for (var i = 0; i < questions.length; i++) { 
-        var userQuestion = questions[questionIndex].title;
+        var titleQuestion = questions[questionIndex].title;
         var userChoices = questions[questionIndex].choices;
-        questionDiv.textContent = userQuestion;
+        questionDiv.textContent = titleQuestion;
     }
+    // append user choice to createlist and list item and compare
     userChoices.forEach(function (newItem) {
         var listItem = document.createElement("li");
         listItem.textContent = newItem;
@@ -79,10 +79,11 @@ function compare(event) {
         newDiv.setAttribute("id", "newDiv"); 
         if (element.textContent == questions[questionIndex].answer) {
             score++;
-            newDiv.textContent = "Correct";
+            newDiv.textContent = "Correct"; //answer is correct 
         } else {
             secondsLeft = secondsLeft - penalty;
-            newDiv.textContent = "Wrong";
+            newDiv.textContent = "Wrong"; //answer is wrong
+            score = 0;
         }
 
     }
@@ -91,7 +92,8 @@ function compare(event) {
     if (questionIndex >= questions.length) {
         
         allDone();
-        newDiv.textContent =  "You got  " + questions.length + " Correct!";  // correct score
+        //newDiv.textContent =  "You got  " + questions.length + " Correct!";  // score needs to show number right out of 4
+        newDiv.textContent =  "Number correct:  " + score ;
     } else {
         render(questionIndex);
     }
