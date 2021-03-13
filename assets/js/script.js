@@ -8,6 +8,7 @@ var secondsLeft = 76;
 var holdInterval = 0;
 var penalty = 10;
 var ulCreateList = document.createElement("ul");
+var grade = document.getElementById('grade');
 
 var questions = [
     {
@@ -87,12 +88,10 @@ function compare(event) {
     }
     // looks at current question
     questionIndex++;
-
     if (questionIndex >= questions.length) {
-        // All done will append last page with user stats
+        
         allDone();
-        //newDiv.textContent = "All Done!" + " " + "You got  " + score + "/" + questions.length + " Correct!";
-        newDiv.textContent = "All Done!" + " " + "You got  " + questions.length + " Correct!";
+        newDiv.textContent =  "You got  " + questions.length + " Correct!";  // correct score
     } else {
         render(questionIndex);
     }
@@ -122,15 +121,13 @@ function allDone() {
         var timeRemaining = secondsLeft;
         var createP2 = document.createElement("p");
         clearInterval(holdInterval);
-        createP.textContent = "score is: " + timeRemaining;
-
-        questionDiv.appendChild(createP2);
+                questionDiv.appendChild(createP2);
     }
 
     // Label
     var createLabel = document.createElement("label");
     createLabel.setAttribute("id", "createLabel");
-    createLabel.textContent = "Enter your initials: ";
+    createLabel.textContent = "Enter initials: ";
 
     questionDiv.appendChild(createLabel);
 
