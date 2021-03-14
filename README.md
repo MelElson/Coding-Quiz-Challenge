@@ -42,15 +42,21 @@ Steps taken by user
     •  If the user answers incorrectly no score is added. 
 	• At the end of the quiz the user is prompted to enter initials. The brower will store the scores until the user clicks on 'Clear High Score'.
     
-### Code
-![Changed HTML](./ScreenshotCode.png)
+### Code Walkthrough
+![Changed HTML](./assets/images/CodeQuiz.mp4)
 
 
-### Website Password Generator
-![Changed HTML](./screenshotPWGenerator.png)
+### Start of Quiz
+![Changed HTML](./assets/images/StartQuiz.png)
 
-### Example Prompt
-![Changed HTML](./ScreenshotPrompt.png)
+### Quiz Questions
+![Changed HTML](./assets/images/QuizQuestions.png)
 
-### Password showing in text box
-![Changed HTML](./ScreenshotPWoutput.png)
+### Score and prompt for user initials
+![Changed HTML](./assets/images/ScoreandEnterInitial.png)
+
+### High Scores
+![Changed HTML](./assets/images/HighScoreList.png)
+
+### Screen shot hmtl javascript
+![Changed HTML](./assets/images/htmlcodeandJavaScript.png)
