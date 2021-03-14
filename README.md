@@ -42,9 +42,6 @@ Steps taken by user
     •  If the user answers incorrectly no score is added. 
 	• At the end of the quiz the user is prompted to enter initials. The brower will store the scores until the user clicks on 'Clear High Score'.
     
-### Code Walkthrough
-![Changed HTML](./assets/images/CodeQuiz.mp4)
-
 
 ### Start of Quiz
 ![Changed HTML](./assets/images/StartQuiz.png)
