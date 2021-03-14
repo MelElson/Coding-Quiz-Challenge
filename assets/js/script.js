@@ -83,7 +83,7 @@ function compare(event) {
         } else {
             secondsLeft = secondsLeft - penalty;
             newDiv.textContent = "Wrong"; //answer is wrong
-            score = 0;
+            
         }
 
     }
@@ -93,7 +93,7 @@ function compare(event) {
         
         allDone();
         //newDiv.textContent =  "You got  " + questions.length + " Correct!";  // score needs to show number right out of 4
-        newDiv.textContent =  "Number correct:  " + score ;
+        newDiv.textContent =  "Score " + score;
     } else {
         render(questionIndex);
     }
