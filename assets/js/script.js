@@ -99,7 +99,7 @@ function compare(event) {
     questionDiv.appendChild(newDiv);
 
 }
-// All done will append last page
+// All done will append last page and create a new header and place to input initials
 function allDone() {
     questionDiv.innerHTML = "";
     Time.innerHTML = "";
@@ -132,7 +132,7 @@ function allDone() {
 
     questionDiv.appendChild(createLabel);
 
-    // input initials
+    // input initials box
     var createInput = document.createElement("input");
     createInput.setAttribute("type", "text");
     createInput.setAttribute("id", "initials");

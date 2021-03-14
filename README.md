@@ -37,11 +37,10 @@ Pull requests are encouraged. Please make sure to update as appropriate
 Steps taken by user
 	• User is given directions when the page loads. When clicking on the start button the quiz is launched. 
 	• The user is given 60 seconds to a multiple choice quiz. Wrong answers deduct 10 seconds from the quiz. 
-	• The user is then prompted if they would like Uppercase. Pressing ok includes. Pressing Cancel omits.
-	• The user is then prompted if they would like Lowercase. Pressing ok includes. Pressing Cancel omits.
-    • The user is then prompted if they would like Numbers. Pressing ok includes. Pressing Cancel omits.
-	• Once user completes prompts they will click on Generate Password and a password will be created based on random values 
-      of the selection they chose within the prompts.
+	• The user has 60 seconds to complete the quiz. If time reaches zero a message displays, "Time's Up"
+	• When a user answers correctly the score counter increases by 1.
+    •  If the user answers incorrectly no score is added. 
+	• At the end of the quiz the user is prompted to enter initials. The brower will store the scores until the user clicks on 'Clear High Score'.
     
 ### Code
 ![Changed HTML](./ScreenshotCode.png)
