@@ -3,7 +3,7 @@ var questionIndex = 0;
 var Time = document.querySelector("#Time");
 var timer = document.querySelector("#startTime");
 var questionDiv = document.querySelector("#questionDiv");
-var secondsLeft = 76;
+var secondsLeft = 60;
 var holdInterval = 0;
 var penalty = 10;
 var ulCreateList = document.createElement("ul");
@@ -52,7 +52,7 @@ timer.addEventListener("click", function () {
 
 // render
 function render(questionIndex) {
-    // Clears existing data 
+    // creates question and 
     questionDiv.innerHTML = "";
     ulCreateList.innerHTML = "";
   // loop through questions
@@ -89,10 +89,9 @@ function compare(event) {
     }
     // looks at current question
     questionIndex++;
-    if (questionIndex >= questions.length) {
+    if (questionIndex >= questions.length) {  //if questions reaches end then all done
         
         allDone();
-        //newDiv.textContent =  "You got  " + questions.length + " Correct!";  // score needs to show number right out of 4
         newDiv.textContent =  "Score " + score;
     } else {
         render(questionIndex);
@@ -105,20 +104,20 @@ function allDone() {
     questionDiv.innerHTML = "";
     Time.innerHTML = "";
 
-    // Heading:
+    // create heading All Done
     var createH1 = document.createElement("h1");
     createH1.setAttribute("id", "createH1");
     createH1.textContent = "All Done!"
 
     questionDiv.appendChild(createH1);
 
-    // Paragraph
+    // create paragraph under heading
     var createP = document.createElement("p");
     createP.setAttribute("id", "createP");
 
     questionDiv.appendChild(createP);
 
-    // score
+    
     if (secondsLeft >= 0) {
         var timeRemaining = secondsLeft;
         var createP2 = document.createElement("p");
@@ -126,14 +125,14 @@ function allDone() {
                 questionDiv.appendChild(createP2);
     }
 
-    // Label
+    // Label for initials
     var createLabel = document.createElement("label");
     createLabel.setAttribute("id", "createLabel");
     createLabel.textContent = "Enter initials: ";
 
     questionDiv.appendChild(createLabel);
 
-    // input
+    // input initials
     var createInput = document.createElement("input");
     createInput.setAttribute("type", "text");
     createInput.setAttribute("id", "initials");
@@ -141,7 +140,7 @@ function allDone() {
 
     questionDiv.appendChild(createInput);
 
-    // submit
+    // create submit button
     var createSubmit = document.createElement("button");
     createSubmit.setAttribute("type", "submit");
     createSubmit.setAttribute("id", "Submit");
