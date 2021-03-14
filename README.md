@@ -26,8 +26,8 @@ The purpose of this task is to create a time quiz using multiple choice question
 The site uses HTML, CSS code, Javascript
 
 ## Installation
-To access the website go to  
-To clone  
+To access the website go to https://melelson.github.io/Coding-Quiz-Challenge/ 
+To clone https://github.com/MelElson/Coding-Quiz-Challenge
 
 
 # Collaboration 
